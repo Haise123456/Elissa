@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>For My Love ❤️</title>
+
+    <style>
+
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#04091d;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-ite center;
+}
+
+.night{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top,#152b5d 0%,#04091d 70%);
+    z-index:-5;
+}
+
+.stars{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-4;
+}
+
+.stars::before{
+    content:"";
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+
+    box-shadow:
+    50px 100px white,
+    200px 250px white,
+    320px 80px white,
+    480px 180px white,
+    600px 50px white,
+    700px 300px white,
+    850px 120px white,
+    960px 400px white,
+    1100px 170px white,
+    1250px 90px white,
+    150px 420px white,
+    350px 520px white,
+    620px 480px white,
+    880px 600px white,
+    1150px 500px white,
+    1350px 350px white;
+
+    animation:twinkle 4s linear infinite;
+}
+
+@keyframes twinkle{
+
+    0%{
+        opacity:.2;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:.2;
+    }
+
+}
+
+.flowers{
+
+    position:absolute;
+    bottom:0;
+
+    width:100%;
+    height:100%;
+
+}
+
+.flower{
+
+    position:absolute;
+    bottom:-350px;
+
+    width:140px;
+    height:700px;
+
+    animation:grow 3s ease forwards;
+
+}
+
+.flower--1{
+
+    left:18%;
+
+    animation-delay:.3s;
+
+}
+
+.flower--2{
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    animation-delay:1s;
+
+}
+
+.flower--3{
+
+    right:18%;
+
+    animation-delay:1.8s;
+
+}
+
+@keyframes grow{
+
+    from{
+
+        transform:translateY(700px);
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.stem{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:12px;
+
+    height:480px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+    to top,
+    #145c32,
+    #5dd46e);
+
+}
+
+.leaf{
+
+    position:absolute;
+
+    width:85px;
+
+    height:45px;
+
+    background:#2dd46d;
+
+    border-radius:100px 0;
+
+    box-shadow:0 0 20px #37ff84;
+
+}
+
+.leaf.left{
+
+    left:-18px;
+
+    bottom:220px;
+
+    transform:
+    rotate(-35deg);
+
+}
+
+.leaf.right{
+
+    right:-18px;
+
+    bottom:310px;
+
+    transform:
+    scaleX(-1)
+    rotate(-35deg);
+
+}
+
+.message{
+
+    position:absolute;
+
+    top:60px;
+
+    width:100%;
+
+    text-align:center;
+
+    color:white;
+
+    animation:fade 4s;
+
+}
+
+.message h1{
+
+    font-size:58px;
+
+    color:#8bd3ff;
+
+    text-shadow:
+    0 0 10px cyan,
+    0 0 30px cyan,
+    0 0 60px cyan;
+
+}
+
+.message p{
+
+    margin-top:15px;
+
+    font-size:20px;
+
+    color:#d9f7ff;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+        /* ===========================
+   FLOWER HEAD
+=========================== */
+
+.flower__center{
+    position:absolute;
+    left:50%;
+    bottom:470px;
+    transform:translateX(-50%);
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#fff8b8;
+    box-shadow:
+        0 0 10px #fff,
+        0 0 20px #ffee88,
+        0 0 40px #ffee88,
+        0 0 80px #ffee88;
+    z-index:20;
+    animation:centerGlow 3s ease-in-out infinite;
+}
+
+@keyframes centerGlow{
+
+    0%,100%{
+        transform:translateX(-50%) scale(1);
+        filter:brightness(1);
+    }
+
+    50%{
+        transform:translateX(-50%) scale(1.15);
+        filter:brightness(1.5);
+    }
+
+}
+
+/* ===========================
+   PETALS
+=========================== */
+
+.flower__leaf{
+
+    position:absolute;
+
+    left:50%;
+    bottom:470px;
+
+    width:80px;
+    height:120px;
+
+    margin-left:-40px;
+
+    border-radius:60% 60% 40% 40%;
+
+    background:linear-gradient(
+        to top,
+        #3ea8ff,
+        #75d9ff,
+        #d7ffff
+    );
+
+    box-shadow:
+        0 0 12px #5cd8ff,
+        0 0 25px #5cd8ff,
+        0 0 50px #5cd8ff,
+        0 0 90px #3ebdff;
+
+    transform-origin:bottom center;
+
+    opacity:0;
+
+    animation:bloom 2s forwards;
+
+}
+
+/* individual petals */
+
+.leaf1{
+
+    transform:rotate(0deg) scale(0);
+
+    animation-delay:2.2s;
+
+}
+
+.leaf2{
+
+    transform:rotate(90deg) scale(0);
+
+    animation-delay:2.4s;
+
+}
+
+.leaf3{
+
+    transform:rotate(45deg) scale(0);
+
+    animation-delay:2.6s;
+
+}
+
+.leaf4{
+
+    transform:rotate(-45deg) scale(0);
+
+    animation-delay:2.8s;
+
+}
+
+/* ===========================
+   BLOOM
+=========================== */
+
+@keyframes bloom{
+
+    0%{
+
+        opacity:0;
+
+    }
+
+    40%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================
+   GLOW
+=========================== */
+
+.flower::after{
+
+    content:"";
+
+    position:absolute;
+    bottom:-320px;
+    width:140px;
+    height:700px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(90,220,255,.55),
+        transparent 70%
+    );
+
+    filter:blur(20px);
+
+    animation:halo 4s ease-in-out infinite;
+
+    z-index:-1;
+
+}
+
+@keyframes halo{
+
+    0%,100%{
+
+        transform:translateX(-50%) scale(.8);
+
+        opacity:.5;
+
+    }
+
+    50%{
+
+        transform:translateX(-50%) scale(1.3);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ===========================
+   STEM SWAY
+=========================== */
+
+.flower{
+
+    animation:
+        grow 3s ease forwards,
+        sway 5s ease-in-out infinite;
+
+}
+
+@keyframes sway{
+
+    0%{
+
+        transform:translateX(0) rotate(-2deg);
+
+    }
+
+    50%{
+
+        transform:translateX(8px) rotate(2deg);
+
+    }
+
+    100%{
+
+        transform:translateX(0) rotate(-2deg);
+
+    }
+
+}
+
+/* ===========================
+   LEAF GLOW
+=========================== */
+
+.leaf{
+
+    animation:leafGlow 3s ease-in-out infinite;
+
+}
+
+@keyframes leafGlow{
+
+    0%,100%{
+
+        box-shadow:0 0 15px #49ff87;
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 20px #5fff9d,
+            0 0 40px #5fff9d;
+
+    }
+
+}
+        
+        /* ===========================
+   FLOATING PARTICLES
+=========================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:3;
+    background-image:
+        radial-gradient(circle,#7fefff 1px,transparent 2px),
+        radial-gradient(circle,#ffffff 1px,transparent 2px),
+        radial-gradient(circle,#67d8ff 2px,transparent 3px);
+    background-size:
+        180px 180px,
+        260px 260px,
+        320px 320px;
+    animation:particlesMove 35s linear infinite;
+    opacity:.65;
+}
+
+@keyframes particlesMove{
+
+    from{
+        transform:translateY(120px);
+    }
+
+    to{
+        transform:translateY(-120px);
+    }
+
+}
+
+/* ===========================
+   FIREFLIES
+=========================== */
+
+.firefly{
+
+    position:absolute;
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:#d8ffff;
+
+    box-shadow:
+        0 0 10px #8ef6ff,
+        0 0 20px #8ef6ff,
+        0 0 40px #8ef6ff;
+
+    animation:fly 10s linear infinite;
+
+}
+
+.firefly:nth-child(1){
+
+    left:12%;
+    top:75%;
+
+    animation-duration:12s;
+
+}
+
+.firefly:nth-child(2){
+
+    left:30%;
+    top:65%;
+
+    animation-duration:9s;
+
+}
+
+.firefly:nth-child(3){
+
+    left:55%;
+    top:80%;
+
+    animation-duration:14s;
+
+}
+
+.firefly:nth-child(4){
+
+    left:70%;
+    top:55%;
+
+    animation-duration:11s;
+
+}
+
+.firefly:nth-child(5){
+
+    left:88%;
+    top:72%;
+
+    animation-duration:13s;
+
+}
+
+@keyframes fly{
+
+    0%{
+
+        transform:
+        translate(0,0)
+        scale(.8);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:
+        translate(-60px,-120px)
+        scale(1.2);
+
+    }
+
+    100%{
+
+        transform:
+        translate(40px,-260px)
+        scale(.8);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ===========================
+   MIST
+=========================== */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:260px;
+
+    background:
+
+    radial-gradient(circle at 20% 50%,
+    rgba(130,240,255,.18),
+    transparent 70%),
+
+    radial-gradient(circle at 80% 40%,
+    rgba(130,240,255,.12),
+    transparent 70%),
+
+    linear-gradient(
+    to top,
+    rgba(130,240,255,.08),
+    transparent);
+
+    filter:blur(35px);
+
+    animation:fogMove 10s ease-in-out infinite alternate;
+
+    pointer-events:none;
+
+}
+
+@keyframes fogMove{
+
+    from{
+
+        transform:translateX(-25px);
+
+    }
+
+    to{
+
+        transform:translateX(25px);
+
+    }
+
+}
+
+/* ===========================
+   EXTRA FLOWER MOVEMENT
+=========================== */
+
+.flower--1{
+
+    animation:
+    grow 3s ease forwards,
+    swayLeft 5s ease-in-out infinite;
+
+}
+
+.flower--2{
+
+    animation:
+    grow 3s ease forwards,
+    swayCenter 6s ease-in-out infinite;
+
+}
+
+.flower--3{
+
+    animation:
+    grow 3s ease forwards,
+    swayRight 5.5s ease-in-out infinite;
+
+}
+
+@keyframes swayLeft{
+
+    0%{
+
+        transform:rotate(-4deg);
+
+    }
+
+    50%{
+
+        transform:rotate(4deg);
+
+    }
+
+    100%{
+
+        transform:rotate(-4deg);
+
+    }
+
+}
+
+@keyframes swayCenter{
+
+    0%{
+
+        transform:translateX(-50%) rotate(-2deg);
+
+    }
+
+    50%{
+
+        transform:translateX(-50%) rotate(2deg);
+
+    }
+
+    100%{
+
+        transform:translateX(-50%) rotate(-2deg);
+
+    }
+
+}
+
+@keyframes swayRight{
+
+    0%{
+
+        transform:rotate(3deg);
+
+    }
+
+    50%{
+
+        transform:rotate(-3deg);
+
+    }
+
+    100%{
+
+        transform:rotate(3deg);
+
+    }
+
+}
+
+/* ===========================
+   MESSAGE GLOW
+=========================== */
+
+.message{
+
+    animation:
+        fade 3s ease,
+        glowText 3s ease-in-out infinite;
+
+}
+
+@keyframes glowText{
+
+    0%,100%{
+
+        text-shadow:
+        0 0 10px cyan,
+        0 0 20px cyan;
+
+    }
+
+    50%{
+
+        text-shadow:
+        0 0 20px #7fefff,
+        0 0 50px #7fefff,
+        0 0 80px #7fefff;
+
+    }
+
+}
+        
+        
+        
+        
+        
+        
+    </style>
+    
+    
+</head>
+<body>
+    
+    
+    
+
+<div class="night"></div>
+
+<div class="stars"></div>
+
+<div class="flowers">
+
+    <!-- Flower 1 -->
+    <div class="flower flower--1">
+        <div class="flower__leaf leaf1"></div>
+        <div class="flower__leaf leaf2"></div>
+        <div class="flower__leaf leaf3"></div>
+        <div class="flower__leaf leaf4"></div>
+        <div class="flower__center"></div>
+
+        <div class="stem"></div>
+
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+    </div>
+
+    <!-- Flower 2 -->
+    <div class="flower flower--2">
+
+        <div class="flower__leaf leaf1"></div>
+        <div class="flower__leaf leaf2"></div>
+        <div class="flower__leaf leaf3"></div>
+        <div class="flower__leaf leaf4"></div>
+
+        <div class="flower__center"></div>
+
+        <div class="stem"></div>
+
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+
+    </div>
+
+    <!-- Flower 3 -->
+    <div class="flower flower--3">
+
+        <div class="flower__leaf leaf1"></div>
+        <div class="flower__leaf leaf2"></div>
+        <div class="flower__leaf leaf3"></div>
+        <div class="flower__leaf leaf4"></div>
+
+        <div class="flower__center"></div>
+
+        <div class="stem"></div>
+
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+
+    </div>
+
+</div>
+
+<div class="message">
+<h1>Hii baby :> </h1>
+    <p>I'm sorry kung di ko afford and real flowers ahh, pero since im a 
+        programmer gagawa nalang ako based on my field :>
+        Pero yun nga, im just testing this code, i want to make it more beuatiful like you NYEHAHAHHA. 
+        Anyways, thankyoufor always being there for me, i know naman na im not 
+        perfect but i hope you appriciate this. 
+        GAGANDAHAN KO SA SUSUNOD TO, I MAKE IT THREE FLOWERS BECAUSE I LOVE YOUUUUU!!!
+    </p>
+</div>
+
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+
+<script>
+    
+    // ==========================
+// Typing Effect
+// ==========================
+
+const message = document.querySelector(".message p");
+
+const text =
+"Every flower blooms because of the sun, just like my world blooms because of you. ❤️";
+
+message.textContent = "";
+
+let index = 0;
+
+function typeText(){
+
+    if(index < text.length){
+
+        message.textContent += text.charAt(index);
+
+        index++;
+
+        setTimeout(typeText,50);
+
+    }
+
+}
+
+setTimeout(typeText,3500);
+
+
+// ==========================
+// Random Sparkles
+// ==========================
+
+function createSparkle(){
+
+    const sparkle = document.createElement("div");
+
+    sparkle.className = "sparkle";
+
+    sparkle.style.position = "fixed";
+
+    sparkle.style.left = Math.random()*100 + "vw";
+
+    sparkle.style.top = Math.random()*100 + "vh";
+
+    const size = Math.random()*5 + 2;
+
+    sparkle.style.width = size + "px";
+    sparkle.style.height = size + "px";
+
+    sparkle.style.borderRadius = "50%";
+
+    sparkle.style.background = "#bfffff";
+
+    sparkle.style.boxShadow =
+    "0 0 10px cyan,0 0 20px cyan";
+
+    sparkle.style.pointerEvents = "none";
+
+    sparkle.style.opacity = "1";
+
+    sparkle.style.transition =
+    "transform 3s linear, opacity 3s linear";
+
+    document.body.appendChild(sparkle);
+
+    requestAnimationFrame(()=>{
+
+        sparkle.style.transform =
+        translateY(-120px) scale(0);
+
+        sparkle.style.opacity = "0";
+
+    });
+
+    setTimeout(()=>{
+
+        sparkle.remove();
+
+    },3000);
+
+}
+
+setInterval(createSparkle,180);
+
+
+// ==========================
+// Shooting Stars
+// ==========================
+
+function shootingStar(){
+
+    const star = document.createElement("div");
+
+    star.style.position = "fixed";
+
+    star.style.left = Math.random()*window.innerWidth+"px";
+
+    star.style.top = Math.random()*250+"px";
+
+    star.style.width = "160px";
+
+    star.style.height = "2px";
+
+    star.style.background =
+    "linear-gradient(to right,white,transparent)";
+
+    star.style.transform =
+    "rotate(-35deg)";
+
+    star.style.opacity = "1";
+
+    star.style.pointerEvents = "none";
+
+    document.body.appendChild(star);
+
+    let x = 0;
+    let y = 0;
+
+    const move = setInterval(()=>{
+
+        x += 14;
+        y += 14;
+
+        star.style.transform =
+        translate(${x}px,${y}px) rotate(-35deg);
+
+    },16);
+
+    setTimeout(()=>{
+
+        clearInterval(move);
+
+        star.remove();
+
+    },900);
+
+}
+
+setInterval(shootingStar,7000);
+
+
+// ==========================
+// Gentle Flower Motion
+// ==========================
+
+document.querySelectorAll(".flower").forEach((flower,i)=>{
+
+    flower.animate(
+
+    [
+
+        {
+
+            transform:"translateY(0px) rotate(-2deg)"
+
+        },
+
+        {
+
+            transform:"translateY(-8px) rotate(2deg)"
+
+        },
+
+        {
+
+            transform:"translateY(0px) rotate(-2deg)"
+
+        }
+
+    ],
+
+    {
+
+        duration:5000+i*1000,
+
+        iterations:Infinity
+
+    });
+
+});
+
+
+// ==========================
+// Firefly Glow
+// ==========================
+
+document.querySelectorAll(".firefly").forEach(firefly=>{
+
+    firefly.animate(
+
+    [
+
+        {
+
+            opacity:.2
+
+        },
+
+        {
+
+            opacity:1
+
+        },
+
+        {
+
+            opacity:.2
+
+        }
+
+    ],
+
+    {
+
+        duration:2000+Math.random()*3000,
+
+        iterations:Infinity
+
+    });
+
+});
+
+
+// ==========================
+// Bloom Pulse
+// ==========================
+
+setInterval(()=>{
+
+    document.querySelectorAll(".flower__center")
+    .forEach(center=>{
+
+        center.animate(
+
+        [
+
+            {
+
+                transform:"translateX(-50%) scale(1)"
+
+            },
+
+            {
+
+                transform:"translateX(-50%) scale(1.3)"
+
+            },
+
+            {
+
+                transform:"translateX(-50%) scale(1)"
+
+            }
+
+        ],
+
+        {
+
+            duration:1200
+
+        });
+
+    });
+
+},4000);
+    
+    
+</script>
+    
+    
+    
+    
+</script>
+
+</body>
+</html>
